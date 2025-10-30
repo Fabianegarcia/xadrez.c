@@ -1,56 +1,45 @@
 #include <stdio.h>
 
-/*
-  Programa: Simulação de movimentos de peças de xadrez
-  Peças: Torre, Bispo e Rainha
-  Estruturas de repetição utilizadas:
-    - Torre: for
-    - Bispo: while
-    - Rainha: do-while
-  Autor: Fabiane Freitas
-  Objetivo: Demonstrar o uso de estruturas de repetição em C simulando movimentos no tabuleiro
-*/
-
 int main() {
-    // ======================
-    // Movimento da TORRE
-    // ======================
+    // ------------------------------
+    // Simulação do movimento das peças de xadrez
+    // ------------------------------
+
+    // 1️⃣ Torre – usa estrutura FOR
+    // Move-se 5 casas para a direita
     int casasTorre = 5;
-    printf("Movimento da Torre (5 casas para a direita):\n");
-
+    printf("Movimento da TORRE:\n");
     for (int i = 1; i <= casasTorre; i++) {
-        printf("Direita (%d casa)\n", i);
+        printf("Direita\n");
     }
 
-    printf("\n");
+    // ------------------------------
 
-    // ======================
-    // Movimento do BISPO
-    // ======================
+    // 2️⃣ Bispo – usa estrutura WHILE
+    // Move-se 5 casas na diagonal: Cima e Direita
     int casasBispo = 5;
-    int contador = 1;
-    printf("Movimento do Bispo (5 casas na diagonal para cima e à direita):\n");
+    int contadorBispo = 1;
 
-    while (contador <= casasBispo) {
-        printf("Cima, Direita (%d casa)\n", contador);
-        contador++;
+    printf("\nMovimento do BISPO:\n");
+    while (contadorBispo <= casasBispo) {
+        printf("Cima, Direita\n");
+        contadorBispo++;
     }
 
-    printf("\n");
+    // ------------------------------
 
-    // ======================
-    // Movimento da RAINHA
-    // ======================
+    // 3️⃣ Rainha – usa estrutura DO-WHILE
+    // Move-se 8 casas para a esquerda
     int casasRainha = 8;
-    int j = 1;
-    printf("Movimento da Rainha (8 casas para a esquerda):\n");
+    int contadorRainha = 1;
 
+    printf("\nMovimento da RAINHA:\n");
     do {
-        printf("Esquerda (%d casa)\n", j);
-        j++;
-    } while (j <= casasRainha);
+        printf("Esquerda\n");
+        contadorRainha++;
+    } while (contadorRainha <= casasRainha);
 
-    printf("\nSimulação concluída!\n");
+    // ------------------------------
 
     return 0;
 }
